@@ -2,10 +2,12 @@
 
 **Descripción:**
 
-    El sistema está compuesto por tres microservicios independientes: API de Clientes / API de Productos Financieros / API Backend For Frontend (BFF)
+    El sistema está compuesto por tres microservicios independientes: 
+    API de Clientes / API de Productos Financieros / API Backend For Frontend (BFF)
 
     Cada microservicio implementa su propio CRUD y mantiene una base de datos independiente.
-    El microservicio BFF se encarga de orquestar las llamadas hacia los servicios de clientes y productos financieros, combinando la información en estructuras tipo DTO para exponerla al frontend de manera eficiente y desacoplada.
+    El microservicio BFF se encarga de orquestar las llamadas hacia los servicios de clientes y productos financieros, combinando 
+    la información en estructuras tipo DTO para exponerla al frontend de manera eficiente y desacoplada.
 
     Los mapeos entre entidades y DTOs fueron implementados manualmente, sin uso de librerías externas como MapStruct o ModelMapper.
 
