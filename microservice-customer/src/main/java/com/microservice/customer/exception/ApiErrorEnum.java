@@ -24,6 +24,8 @@ public enum ApiErrorEnum {
     CUSTOMER_WITH_SAME_ID(HttpStatus.CONFLICT, "The customer with the same id already exists."),
 
     CUSTOMER_CONVERSION_FAILED(HttpStatus.CONFLICT, "The customer conversion failed."),
+
+    ENCRYPTING_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "There was an error while encrypting code from customer."),
     ;
 
     HttpStatus status;

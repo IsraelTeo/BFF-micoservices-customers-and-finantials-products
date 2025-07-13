@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types: application/json,application/xml,text/html,text/plain
+  servlet:
+    context-path: /api/v1
+
+http-connector:
+  hosts:
+    microservice-customer:
+      host: localhost
+      port: 8081
+      endpoints:
+        get-customer:
+          url: "/api/v1/customers/code/{code}"
+          readTimeOut: 1000 #Tiempo de comunicación
+          writeTimeOut: 1000 #Tiempo de respuesta
+          connectionTimeOut: 1000 #Tiempo de espera para establecer la comunicación
+    microservice-product:
+      host: localhost
+      port: 8083
+      endpoints:
+        get-products:
+          url: "/api/v1/products/code/{customerCode}"
+          readTimeOut: 1000 #Tiempo de comunicación
+          writeTimeOut: 1000 #Tiempo de respuesta
+          connectionTimeOut: 1000 #Tiempo de espera para establecer la comunicación

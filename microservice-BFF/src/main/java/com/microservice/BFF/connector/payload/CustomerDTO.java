@@ -1,10 +1,8 @@
-package com.microservice.customer.dto;
+package com.microservice.BFF.connector.payload;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
 
-@Builder
-public record CustomerResponseDTO(
+public record CustomerDTO(
         @JsonProperty("encrypted_code")
         String encryptedCode,
 

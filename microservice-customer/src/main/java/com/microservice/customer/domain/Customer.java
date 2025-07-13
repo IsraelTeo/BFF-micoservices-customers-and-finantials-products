@@ -35,9 +35,9 @@ public class Customer {
     @Column(value = "document_type")
     String documentType;
 
-    @Column(value = "encrypted_number")
+    @Column(value = "document_number")
     String documentNumber;
 
-    @Column(value = "encrypted_code")
+    @Column(value = "creation_date")
     LocalDate creationDate;
 }
